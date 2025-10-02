@@ -6,23 +6,26 @@ body {
 }
 
 h1 {
-color:rgb(229, 189, 27)
+color:rgb(28, 37, 138);
+font-size: 22;
+
 }
 
 h2 {
     display: flex;
     justify-content: center;
     text-decoration: underline;
+    color:rgb(109, 89, 10);
+
 }
 
 
 
-.main_form {
+.main_form_container {
     background-color: rgb(129, 126, 36);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     padding: 20px;
     border-radius: 10px;
     border-style: dashed;
@@ -31,55 +34,89 @@ h2 {
     margin: 0 auto;
     width: 100%;
     max-width: 400px;
-    gap: 20px;
+     gap: 30px;
     
      
 }
 
 .main_form_field {
-    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
     
-       
+    
+}
+
+.main_form_field_label {
+ color: aliceblue;   
+    
+
+
 }
 
 .main_form_field_input {
+
     border: solid 2px ;
-    padding: 5px 10px;
+    padding: 3px;
     border-radius: 10px;
+    width: 100%;
 
 }
 
 .main_form_field_input:focus {
-    border-color: rgb(13, 236, 202);
+    border-color: rgb(225, 236, 13);
     outline: rgb(11, 11, 11);
-    
-    
+    background-color: rgb(234, 239, 241);
+}
+
+.main_form_field_input:invalid {
+    border-color: red; 
+
+}
+.main_form_field_input:valid {
+    background-color: rgb(241, 184, 12);
+    border-color: blue;
 
 }
 
-.main_form_submit {
+
+.submit_form_field {
     display: flex;
-    border-color: aquamarine;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.button_text_field {
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(32, 225, 225);
     background-color: burlywood;
     border-style: dotted;
     border-radius: 10px;
     padding: 5px 5px;
     font-size: 16px;
-    color: aquamarine;
+    color: rgb(8, 96, 66);
     font-weight: 700;
     transition: all 0.3s;
     
 
 }
 
-.main_form_submit:hover {
+.button_text_field:hover {
     transform: scale(1.5);
 
 }
 
-.main_form_submit:active {
+.button_text_field:active {
     transform: scale(1.05);
     transform: translateY(3px);
+}
+
+#myCheck {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+
 }
