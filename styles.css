@@ -74,8 +74,8 @@ h2 {
 
 }
 .main_form_field_input:valid {
-    background-color: rgb(241, 184, 12);
-    border-color: blue;
+    background-color: rgb(20, 205, 17);
+    border-color: rgb(210, 232, 11);
 
 }
 

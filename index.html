@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Validation Form using HTML and JavaScript</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles.css">
    
-    <title>Validation Form using HTML and JavaScript</title>
 </head>
 <body>
     <header class="header">
@@ -17,36 +17,39 @@
      <main>
         <h2>Validation Form</h2>
         
-        <form action="" class="main_form_container" id="main_form_container">
+        <form action="" class="main_form_container" id="main-form-container">
         
             <!-- Username -->
          <div class="main_form_field">
     <label for="userName" class="main_form_field_label">Username:</label>
     <input type="text" id="userName" class="main_form_field_input" minlength="5" required>
-   
+      
+    <input type="checkBox" id="checkUserName"required> 
+      </div>
+       
+      <!-- JavaScript validation input field -->
+             <div class="main_form_field">
+    <label for="userName2" class="main_form_field_label">userName:</label>
+    <input type="text" id="userName2" class="main_form_field_input" minlength="4" required> 
     
-    <input type="checkBox" id="checkUserName" onclick="myFunction()"> 
-     <p id="text" style="display:none">Checkbox is CHECKED!</p>
-        </div>
+    <input type="checkBox" id="checkUserName2" minlength="4" required>
+             </div>
        
     <!-- Email-Address -->
         <div class="main_form_field">
     <label for="email" class="main_form_field_label">Email-Address:</label>
-    <input type="email" id="email" name="email" class="main_form_field_input" required> 
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" class="main_form_field_input" required> 
 
     
-     <input type="checkBox" id="checkEmail" onclick="myFunction()">
-     <p id= "text" style="display:none">Checkbox is CHECKED!</p>
-    
-         </div>
+     <input type="checkBox" id="checkEmail"required>
+        </div>
       
     <!-- Phone Number -->
         <div class="main_form_field">
     <label for="phone" class="main_form_field_label">Phone Number:</label>
     <input type="tel"id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="main_form_field_input" required> 
     
-        <input type="checkBox" id="checkPhoneNumber" onclick="myFunction()">
-        <p id= "text" style="display:none">Checkbox is CHECKED!</p>
+        <input type="checkBox" id="checkPhoneNumber"required>
         </div> 
     
     
@@ -54,9 +57,7 @@
         <div class="main_form_field">
     <label for="password" class="main_form_field_label">Password:</label>
     <input type="password" id="password"  name="password" class="main_form_field_input" minlength="6" required>
-    
-        <input type="checkBox" id="checkPassword" onclick="myFunction()">
-         <p id= "text" style="display:none">Checkbox is CHECKED!</p>
+     <input type="checkBox" id="checkPassword" required>
         </div> 
     
  
