@@ -17,7 +17,7 @@
      <main>
         <h2>Validation Form</h2>
         
-        <form action="" class="main_form_container">
+        <form action="" class="main_form_container" id="main_form_container">
         
             <!-- Username -->
          <div class="main_form_field">
@@ -25,7 +25,7 @@
     <input type="text" id="userName" class="main_form_field_input" minlength="5" required>
    
     
-    <input type="checkBox" id="myCheck" onclick="myFunction()"> 
+    <input type="checkBox" id="checkUserName" onclick="myFunction()"> 
      <p id="text" style="display:none">Checkbox is CHECKED!</p>
         </div>
        
@@ -35,7 +35,7 @@
     <input type="email" id="email" name="email" class="main_form_field_input" required> 
 
     
-     <input type="checkBox" id="myCheck" onclick="myFunction()">
+     <input type="checkBox" id="checkEmail" onclick="myFunction()">
      <p id= "text" style="display:none">Checkbox is CHECKED!</p>
     
          </div>
@@ -45,7 +45,7 @@
     <label for="phone" class="main_form_field_label">Phone Number:</label>
     <input type="tel"id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="main_form_field_input" required> 
     
-        <input type="checkBox" id="myCheck" onclick="myFunction()">
+        <input type="checkBox" id="checkPhoneNumber" onclick="myFunction()">
         <p id= "text" style="display:none">Checkbox is CHECKED!</p>
         </div> 
     
@@ -55,22 +55,22 @@
     <label for="password" class="main_form_field_label">Password:</label>
     <input type="password" id="password"  name="password" class="main_form_field_input" minlength="6" required>
     
-        <input type="checkBox" id="myCheck" onclick="myFunction()">
+        <input type="checkBox" id="checkPassword" onclick="myFunction()">
          <p id= "text" style="display:none">Checkbox is CHECKED!</p>
         </div> 
-        </div>
+    
  
         
    <!-- Buttons -->
         <div class="submit_form_field"> 
-    <button class="button_text_field" type="button">Submit</button>
-    <button class="button_text_field" type="button">Reset</button>
+    <button class="button_text_field" type="submit">Submit</button>
+    <button class="button_text_field" type="reset">Reset</button>
         <div>
     
     
   </form>
 </main>
-
+<div id="output"></div>
 <!-- JavaScript -->
 <script src="./script.js"></script>
 
