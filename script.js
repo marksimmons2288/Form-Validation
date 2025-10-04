@@ -8,9 +8,6 @@ const userNameInput= document.getElementById("userName");
 const emailInput= document.getElementById("email");
 const phoneInput= document.getElementById("phone");
 const passwordInput= document.getElementById("password");
-// JavaScript Validation varibles
-const userName2Input= document.getElementById("userName2")
-
 
 // Check Box Inputs for Validation
 const checkUserNameInput= document.getElementById("checkUserName");
@@ -18,37 +15,39 @@ const checkEmailInput= document.getElementById("checkEmail");
 const checkPhoneNumberInput= document.getElementById("checkPhoneNumber");
 const checkPasswordInput= document.getElementById("checkPassword");
 
-// Page Submission Refresh (Event Listener)
-form.addEventListener("submit",(function (event) {
-    e.preventDefault();
-
-    // JavaScript Validation for input field for username (length minimum 5 characters)
 
     // JavaScript Validation varibles
 const form = document.getElementById('form');
+const userName2Input= document.getElementById("userName2");
 const errorElement = document.getElementById('error');
 
-form.addEventListener('submit', (e) => {
-    let messages = [];
-   
-    if(userName2Input.value === '' ) {
-        messages.push('Name is required');
-    }
+  // JavaScript Validation for input field for username (length minimum 4 characters)
 
-    if (userName2Input.value.length < 4) {
-        messages.push('Name must be at least 4 characters');
-    }
+// Page Submission (Event Listener)
+form.addEventListener("submit",(function (event) {
+    event.preventDefault();
+    errorElement.textContent = "";
 
-    
-
-    
-    
-});
-
-    
+    const userName2 = userName2Input.value.trim();
 
 
-   
+    if (userName2.length < 4) {
+        errorElement.textContent =('UserName must be at least 4 characters')}
+        else {
+            errorElement.textContent = "UserName is valid";
+        }
+            // Attempted to manually toggle through and add CSS to input field without using HTML (Failed)
+    userName2Input.addEventListener("input",() => {const value = userName2Input.value.trim();
+
+        if (value.length >= 4) {
+            userName2Input.classList.add("valid");
+            userName2Input.classList.remove("invalid");
+         } else {
+            userName2Input.classList.add("invalid");
+            userName2Input.classList.remove("valid");
+
+            }
+        });
 
 
 // Get the Outputs
