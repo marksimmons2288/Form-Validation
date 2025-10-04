@@ -19,20 +19,33 @@ const checkPhoneNumberInput= document.getElementById("checkPhoneNumber");
 const checkPasswordInput= document.getElementById("checkPassword");
 
 // Page Submission Refresh (Event Listener)
-mainFormContainer.addEventListener("submit",(function (event) {
-    event.preventDefault();
+form.addEventListener("submit",(function (event) {
+    e.preventDefault();
 
     // JavaScript Validation for input field for username (length minimum 5 characters)
 
+    // JavaScript Validation varibles
+const form = document.getElementById('form');
+const errorElement = document.getElementById('error');
 
- userName2Input.addEventListener("input", (e) => {
-    userName2Input.reportValidity();
-    if (userName2Input.validity.tooShort){
-       console.log("Not enough characters entered.");
-    }else {
-            console.log("Input is valid");
-        }
-    });
+form.addEventListener('submit', (e) => {
+    let messages = [];
+   
+    if(userName2Input.value === '' ) {
+        messages.push('Name is required');
+    }
+
+    if (userName2Input.value.length < 4) {
+        messages.push('Name must be at least 4 characters');
+    }
+
+    
+
+    
+    
+});
+
+    
 
 
    
