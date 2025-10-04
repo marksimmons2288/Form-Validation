@@ -1,2 +1,2 @@
 # Form-Validation
-Develop a wed form that incorporates HTML5 and JavaScript validation techniques.
+Develop a web form that incorporates HTML5 and JavaScript validation techniques.
